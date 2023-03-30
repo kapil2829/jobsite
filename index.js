@@ -1,5 +1,6 @@
 let express = require('express');
 let mongoose = require('mongoose');
+let flash = require('connect-flash');
 let methodOverride = require('method-override');
 let app = express();
 let path = require('path');
@@ -47,7 +48,7 @@ app.use(function(req, res, next) {
 });
 // import router
 let jobRoutes = require('./routes/jobs.js');
-let notifRoutes = require('./routes/notifications');
+let notifRoutes = require('./routes/notifications.js');
 let authRoutes = require('./routes/auth');
 let userRoutes = require('./routes/user');
 app.use(jobRoutes);
